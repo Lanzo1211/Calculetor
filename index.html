@@ -1,0 +1,95 @@
+<html>
+<head>
+
+    <title>Calculater</title>
+</head>
+<body>
+<div class ="container">
+    <div class="calculater">
+        <form>
+            <div class="dis" >
+                <input type="text" name = "dis">
+            </div>
+            <div>
+                <input type="button" value ="AC" onclick="dis.value = ''" class="color1">
+                <input type="button" value ="DEL" onclick="dis.value = dis.value.toString().slice(0,-1)"class="color1">
+                <input type="button" value ="." onclick="dis.value += '.'"class="color1">
+                <input type="button" value ="/" onclick="dis.value += '/'"class="color1">
+            </div>
+            <div>
+                <input type="button" value ="7" onclick="dis.value += '7'">
+                <input type="button" value ="8" onclick="dis.value += '8'">
+                <input type="button" value ="9" onclick="dis.value += '9'">
+                <input type="button" value ="*" onclick="dis.value += '*'"class="color1">
+            </div>
+            <div>
+                <input type="button" value ="4" onclick="dis.value += '4'">
+                <input type="button" value ="5" onclick="dis.value += '5'">
+                <input type="button" value ="6" onclick="dis.value += '6'">
+                <input type="button" value ="-" onclick="dis.value += '-'"class="color1">
+            </div>
+            <div>
+                <input type="button" value ="1" onclick="dis.value += '1'">
+                <input type="button" value ="2" onclick="dis.value += '2'">
+                <input type="button" value ="3" onclick="dis.value += '3'">
+                <input type="button" value ="+" onclick="dis.value += '+'"class="color1">
+            </div>
+            <div>
+                <input type="button" value ="00" onclick="dis.value += '00'">
+                <input type="button" value ="0"  onclick="dis.value += '0'">
+                <input type="button" value ="=" onclick = "dis.value = eval(dis.value)"class="equal"> 
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script src = "style.js"></script>
+</body>
+<style>
+.container{
+width: 100%;
+height: 100vh; 
+background: rgb(128, 202, 202);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.calculater{
+    background: rgb(75, 75, 74);
+    padding: 20px;
+    border-radius: 20px;
+}
+.calculater form input{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    box-shadow:-8px -8px 15px rgba(167, 158, 158, 0.685),5px 5px 15px  rgba(0, 0, 0, 0.26); 
+    background: transparent;
+    font-size: 20px;
+    color:rgb(118, 236, 230);
+    cursor:pointer;
+    margin: 10px;
+    border-radius: 15px;
+}
+form .dis{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0 ;
+}
+form .dis input{
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+}
+form input.equal{
+    width: 145px;
+    color: azure;
+}
+form input.color1{
+    color: rgb(91, 164, 236);
+}
+</style>
+</html>
